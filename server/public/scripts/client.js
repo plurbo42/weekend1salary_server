@@ -7,7 +7,7 @@ $(document).ready(onReady);
 
 function onReady() {
     $('#inputlist').on('click', '#newEmployeeButton', submitNewEmployee);
-    $('#remove').on('click', removeEmployee);
+    $('#employeeTable').on('click', '.removeButton', removeEmployee);
 }
 
 var employeeArray = [];
@@ -44,7 +44,7 @@ function submitNewEmployee() {
         '<td class="employeeID">' + newEmployee.employeeID + '</td>' +
         '<td class="jobTitle">' + newEmployee.jobTitle + '</td>' +
         '<td class="annualSalary">$' + newEmployee.annualSalary + '</td>' +
-        '<td><button class="removeButton" data-index="' + employeeArray.indexOf + '">Remove Employee</button></td>' +
+        '<td><button class="removeButton" data-index="' + employeeArray.indexOf(newEmployee) + '">Remove Employee</button></td>' +
         '</tr>')
     //row added
     
@@ -59,9 +59,10 @@ function submitNewEmployee() {
 }// end submit new employee 
 
 function removeEmployee() {
-    var employeeToRemove = $(this).data('index')
-    $(this).remove()
-    employeeArray.splice(employeeToRemove)
+    console.log('in removeEmployee')
+    $(this).parent().parent().remove();
+    var removeIndex = $(this).data('index');
+    employeeArray.splice( removeIndex, 1 );
     calculateCosts(employeeArray);
 }
 

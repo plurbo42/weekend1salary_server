@@ -23,7 +23,7 @@ body {
     margin: 5px;
 }
 
-#remove {
+.removeButton {
     background-color: rgb(219, 29, 29);
     border: none;
     color: white;
