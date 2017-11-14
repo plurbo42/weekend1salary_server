@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="scripts/client.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Salary Calculator</title>
+</head>
+
+<body>
+    <div id="title">
+    <h1>Employee Salary Calculator</h1>
+    <p id=inputlist>
+        First Name:
+        <input id="firstNameInput" type="text"> Last Name:
+        <input id="lastNameInput" type="text"> Employee ID:
+        <input id="employeeIDInput" type="text"> Job Title:
+        <input id="jobTitleInput" type="text"> Annual Salary:
+        <input id="annualSalaryInput" type="text">
+        <button id="newEmployeeButton">Submit New Employee</button>
+    </p>
+    </div>
+
+
+    <table>
+
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Employee ID</th>
+        <th>Job Title</th>
+        <th>Annual Salary</th>
+
+
+        <tbody id="employeeTable">
+            <!-- <td class="firstName"></td>
+            <td class="lastName"></td>
+            <td class="employeeID"></td>
+            <td class="jobTitle"></td>
+            <td class="annualSalary"></td> -->
+        </tbody>
+    </table>
+
+    <p>
+        <p id="calculations"></p>
+        <button id="remove">Remove Employee</button>
+    </p>
+</body>
+
+</html>
